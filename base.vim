@@ -3,6 +3,9 @@ set guifont=Menlo:h14
 " history存储容量
 set history=2000
 
+" insert 模式下 backspace 可以删除
+set backspace=2
+
 " 文件修改之后自动载入
 set autoread
 
@@ -31,7 +34,7 @@ set nobackup
 set ignorecase
 
 " 高亮search命中的文本。
-set hlsearch
+" set hlsearch
 
 " 搜索逐字符高亮
 set incsearch
@@ -50,9 +53,10 @@ set cursorline
 
 " 设置Tab键的宽度
 set shiftwidth=2
+
+" 将Tab键更改为两个空格
 set tabstop=2
 
-" 将Tab键更改为四个空格
 set expandtab
 
 " 与系统共享剪贴板(亲测MacOS)

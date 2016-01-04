@@ -22,6 +22,7 @@ Bundle 'https://github.com/airblade/vim-gitgutter.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 Bundle 'https://github.com/marijnh/tern_for_vim.git'
+
 " 代码对齐
 Bundle 'https://github.com/godlygeek/tabular.git'
 " 代码缩进线
@@ -43,14 +44,3 @@ Bundle 'https://github.com/tpope/vim-fugitive.git'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
