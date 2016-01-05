@@ -34,13 +34,26 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-
+" 设置 airline 的 statusline 一直显示
+set laststatus=2
 
 " tabline中buffer显示编号
 let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 " bufferline 插件配置
 
 let g:airline#extensions#bufferline#enabled = 1
+
+" gitgutter 插件的配置
+let g:gitgutter_sign_column_always = 1
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+" 保证 gitgutter 实时更新，这个得根据你系统的系能，但是要求 vim 7.3.105
+" 及以上版本
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+" 打开 gitgutter 高亮
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_signs = 1
 
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
@@ -80,6 +93,3 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-
-
