@@ -6,6 +6,9 @@ set history=2000
 " insert 模式下 backspace 可以删除
 set backspace=2
 
+" 设置 vim 加载到文件底部时，多显示 5 行
+set scrolloff=5
+
 " 文件修改之后自动载入
 set autoread
 
