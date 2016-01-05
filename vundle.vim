@@ -21,7 +21,7 @@ Bundle 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
 Bundle 'https://github.com/airblade/vim-gitgutter.git'
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 Bundle 'https://github.com/Valloric/YouCompleteMe.git'
-Bundle 'https://github.com/marijnh/tern_for_vim.git'
+" Bundle 'https://github.com/marijnh/tern_for_vim.git'
 
 " 代码对齐
 Bundle 'https://github.com/godlygeek/tabular.git'

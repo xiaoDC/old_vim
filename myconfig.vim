@@ -2,7 +2,7 @@
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
 map <C-n> :NERDTreeToggle<CR>
-" map <C-q> :NERDTreeCWD<CR>
+map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -23,8 +23,13 @@ let g:airline_right_alt_sep = '❮'
 " let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.linenr = ' ∫ '
 let g:airline_symbols.branch = '   ⎇ '
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_symbols.crypt = '🔒'
 
 
+
+" 设置 airline 的 statusline 一直显示
+set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -34,8 +39,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-" 设置 airline 的 statusline 一直显示
-set laststatus=2
 
 " tabline中buffer显示编号
 let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
@@ -43,8 +46,11 @@ let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 
 let g:airline#extensions#bufferline#enabled = 1
 
+
+
 " gitgutter 插件的配置
-let g:gitgutter_sign_column_always = 1
+" let g:gitgutter_sign_column_always = 1
+
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 " 保证 gitgutter 实时更新，这个得根据你系统的系能，但是要求 vim 7.3.105
@@ -54,6 +60,21 @@ let g:gitgutter_eager = 0
 " 打开 gitgutter 高亮
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_signs = 1
+
+
+" 设置 nerdtree-git-plugin 的一些字体图标
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "~",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "-",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
 
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
