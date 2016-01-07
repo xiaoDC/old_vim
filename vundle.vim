@@ -38,8 +38,17 @@ Bundle 'git@github.com:terryma/vim-multiple-cursors.git'
 " 该插件是为了 airline 中正确显示 git branch
 Bundle 'https://github.com/tpope/vim-fugitive.git'
 
+" 添加注释的插件
+Bundle 'https://github.com/scrooloose/nerdcommenter.git'
 
+" 给word添加引号等
+"Bundle 'https://github.com/tpope/vim-surround.git'
 
+" 自动补全引号等
+Bundle 'https://github.com/Raimondi/delimitMate.git'
+
+"jade 插件
+Bundle 'https://github.com/digitaltoad/vim-jade.git'
 
 call vundle#end()            " required
 

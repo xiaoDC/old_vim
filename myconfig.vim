@@ -1,11 +1,11 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-map <C-n> :NERDTreeToggle<CR>
-map <C-q> :NERDTreeFocus<CR>
+" nmap <C-q> :NERDTreeToggle<CR>
+" map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+"autocmd vimenter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " nnoremap ; :
 " nnoremap : ;
 
@@ -20,8 +20,7 @@ let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
-" let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.linenr = ' ∫ '
+let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '   ⎇ '
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.crypt = '🔒'
@@ -49,7 +48,7 @@ let g:airline#extensions#bufferline#enabled = 1
 
 
 " gitgutter 插件的配置
-" let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_column_always = 1
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
@@ -66,7 +65,7 @@ let g:gitgutter_signs = 1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "~",
     \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
+    \ "Untracked" : "*",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "═",
     \ "Deleted"   : "-",
@@ -93,7 +92,7 @@ nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
-nnoremap <TAB> :tabnext<CR>
+" nnoremap <TAB> :tabnext<CR>
 
 
 
@@ -107,10 +106,11 @@ let g:indentLine_enabled = 1
 " let g:indentLine_char = '︙'
 let g:indentLine_char = '┆'
 
-
+"缩进插件 缩进符号后加一个空格
+let g:NERDSpaceDelims=1
 
 " 快捷键的一些设置
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>

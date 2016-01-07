@@ -1,5 +1,6 @@
 " 字体 && 字号
-set guifont=Menlo:h14
+set guifont=Menlo:h13
+
 " history存储容量
 set history=2000
 
@@ -22,6 +23,13 @@ set nohlsearch
 " 编码设置
 set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
+set lbr
+set tw=80
+
 
 " 语言设置
 set langmenu=zh_CN.UTF-8
@@ -57,6 +65,10 @@ set cursorline
 " 设置Tab键的宽度
 set shiftwidth=2
 
+" 文件中显示 tab whitespace
+set listchars=tab:>…,trail:-
+set list
+
 " 将Tab键更改为两个空格
 set tabstop=2
 
@@ -80,9 +92,11 @@ set noautoindent
 " 去掉输入错误的提示声音
 set novisualbell         " don't beep
 set noerrorbells         " don't beep
+set visualbell t_vb=
 
 " vimrc文件修改之后自动加载。 linux。
 autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost .vimrc source ~/.vim/*.vim
 
 " 禁止显示滚动条
 set guioptions-=l
@@ -91,7 +105,7 @@ set guioptions-=r
 set guioptions-=R
 
 " 禁止折行
-set nowrap
+"set nowrap
 
 " 开启语法高亮功能
 syntax enable
@@ -106,3 +120,24 @@ setlocal foldlevel=1 " 设置折叠层数为
 " set foldclose=all " 设置为自动关闭折叠
 " 用空格键来开关折叠
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+  let l:currentBufNum = bufnr("%")
+  let l:alternateBufNum = bufnr("#")
+
+  if buflisted(l:alternateBufNum)
+    buffer #
+  else
+    bnext
+  endif
+
+  if bufnr("%") == l:currentBufNum
+    new
+  endif
+
+  if buflisted(l:currentBufNum)
+    execute("bdelete! ".l:currentBufNum)
+  endif
+endfunction
