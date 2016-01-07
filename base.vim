@@ -113,6 +113,9 @@ syntax enable
 syntax on
 
 
+noremap H ^
+noremap L $
+
 set foldenable " 开始折叠
 set foldmethod=syntax " 设置语法折叠
 set foldcolumn=0 " 设置折叠区域的宽度
