@@ -27,7 +27,10 @@ Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 Bundle 'https://github.com/godlygeek/tabular.git'
 " 代码缩进线
 Bundle 'https://github.com/Yggdroot/indentLine.git'
+" 代码补全插件
 Bundle 'https://github.com/SirVer/ultisnips.git'
+" 代码补全集合
+" Bundle 'https://github.com/honza/vim-snippets.git'  
 
 " Bundle 'jnurmine/Zenburn'
 Bundle 'altercation/vim-colors-solarized'

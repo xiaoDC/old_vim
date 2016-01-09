@@ -28,7 +28,7 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set foldcolumn=1
 
 set lbr
-set tw=80
+set textwidth=80
 
 
 " 语言设置
@@ -67,7 +67,6 @@ set shiftwidth=2
 
 " 文件中显示 tab whitespace
 set listchars=tab:>…,trail:-
-set list
 
 " 将Tab键更改为两个空格
 set tabstop=2
@@ -78,8 +77,9 @@ set expandtab
 set clipboard+=unnamed
 
 " 设置配色方案
-colorscheme molokai
+" colorscheme molokai
 " colorscheme solarized
+colorscheme Tomorrow-Night-Eighties
 
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -104,8 +104,8 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-" 禁止折行
-"set nowrap
+" 允许折行
+set wrap
 
 " 开启语法高亮功能
 syntax enable
@@ -120,6 +120,7 @@ set foldenable " 开始折叠
 set foldmethod=syntax " 设置语法折叠
 set foldcolumn=0 " 设置折叠区域的宽度
 setlocal foldlevel=1 " 设置折叠层数为
+set foldlevelstart=99
 " set foldclose=all " 设置为自动关闭折叠
 " 用空格键来开关折叠
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>

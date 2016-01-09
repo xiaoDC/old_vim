@@ -9,6 +9,8 @@
 " nnoremap ; :
 " nnoremap : ;
 
+" 修复indentline 在 nerdtree 中不显示
+autocmd FileType help,nerdtree IndentLinesToggle
 
 " airline 的一些配置(必须安装 airline 插件)
 let g:airline_theme='tomorrow'
@@ -57,7 +59,7 @@ nmap [h <Plug>GitGutterPrevHunk
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 " 打开 gitgutter 高亮
-let g:gitgutter_highlight_lines = 1
+" let g:gitgutter_highlight_lines = 1
 let g:gitgutter_signs = 1
 
 
@@ -76,8 +78,10 @@ let g:NERDTreeIndicatorMapCustom = {
 
 
 " 映射切换buffer的键位
-nnoremap [b :bp<CR>
-nnoremap ]b :bn<CR>
+" nnoremap [b :bp<CR>
+" nnoremap ]b :bn<CR>
+nnoremap <leader>[ :bp<CR>
+nnoremap <leader>] :bn<CR>
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
@@ -105,6 +109,7 @@ let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_enabled = 1
 " let g:indentLine_char = '︙'
 let g:indentLine_char = '┆'
+let g:indentLine_fileTypeExluce=['help', 'nerdtree']
 
 "缩进插件 缩进符号后加一个空格
 let g:NERDSpaceDelims=1
