@@ -8,7 +8,7 @@ set history=2000
 set backspace=2
 
 " 设置 vim 加载到文件底部时，多显示 5 行
-set scrolloff=5
+" set scrolloff=5
 
 " 文件修改之后自动载入
 set autoread

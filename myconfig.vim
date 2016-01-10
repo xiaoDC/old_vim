@@ -4,7 +4,7 @@
 " nmap <C-q> :NERDTreeToggle<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
-"autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " nnoremap ; :
 " nnoremap : ;
@@ -100,10 +100,10 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 " 设置 ultisnips
 let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["myUsnippets", "bundle/ultisnips/UltiSnips"]
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" let g:UltiSnipsSnippetDirectories=["myUsnippets", "bundle/ultisnips/UltiSnips"]
 
 " 对齐插件 tabular 配置
 let g:tabular_loaded = 1
@@ -118,6 +118,9 @@ let g:indentLine_fileTypeExluce=['help', 'nerdtree']
 "缩进插件 缩进符号后加一个空格
 let g:NERDSpaceDelims=1
 
+" 多光标插件的设置
+nnoremap <C-c> :call multiple_cursors#quit()<CR>
+
 " 快捷键的一些设置
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>
@@ -129,5 +132,5 @@ func! SaveFile()
   exec "w"
 endfunc
 map  <leader>s :call SaveFile()<CR>
-imap <leader>s <ESC>:call SaveFile()<CR>
+" imap <leader>s <ESC>:call SaveFile()<CR>
 vmap <leader>s <ESC>:call SaveFile()<CR>

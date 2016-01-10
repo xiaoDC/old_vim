@@ -26,7 +26,6 @@ Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 " 代码补全插件
 Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 " Bundle 'https://github.com/marijnh/tern_for_vim.git'
-
 " 代码对齐
 Bundle 'https://github.com/godlygeek/tabular.git'
 " 代码缩进线
@@ -34,33 +33,26 @@ Bundle 'https://github.com/Yggdroot/indentLine.git'
 " 代码补全插件, 可以配合 YouCompleteMe 使用
 Bundle 'https://github.com/SirVer/ultisnips.git'
 " 代码补全集合
-" Bundle 'https://github.com/honza/vim-snippets.git'  
-
+" Bundle 'https://github.com/honza/vim-snippets.git'
 " Bundle 'jnurmine/Zenburn'
 " Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
-
 " 多光标操作的插件
-" Bundle 'git@github.com:terryma/vim-multiple-cursors.git'
+Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 " Bundle 'git@github.com:humiaozuzu/TabBar.git'
-
 " 该插件是为了 airline 中正确显示 git branch
 Bundle 'https://github.com/tpope/vim-fugitive.git'
-
 " 添加注释的插件
 Bundle 'https://github.com/scrooloose/nerdcommenter.git'
-
 " 给word添加引号等
 "Bundle 'https://github.com/tpope/vim-surround.git'
-
 " 自动补全引号等
 Bundle 'https://github.com/Raimondi/delimitMate.git'
-
 "jade 插件
 Bundle 'https://github.com/digitaltoad/vim-jade.git'
-
 " TODO list 插件
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
-
+" 去掉多余空格的插件
+Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 
 
 call vundle#end()            " required
