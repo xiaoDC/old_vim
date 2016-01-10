@@ -85,7 +85,7 @@ nnoremap <leader>] :bn<CR>
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
-
+" 设置 airline， 即顶部tab的快捷键，可以快速查看buffer
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -98,8 +98,12 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 " nnoremap <TAB> :tabnext<CR>
 
-
-
+" 设置 ultisnips
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["myUsnippets", "bundle/ultisnips/UltiSnips"]
 
 " 对齐插件 tabular 配置
 let g:tabular_loaded = 1
@@ -119,3 +123,11 @@ let g:NERDSpaceDelims=1
 " nnoremap <C-K> <C-W><C-K>
 " nnoremap <C-L> <C-W><C-L>
 " nnoremap <C-H> <C-W><C-H>
+
+" \s 一键保存
+func! SaveFile()
+  exec "w"
+endfunc
+map  <leader>s :call SaveFile()<CR>
+imap <leader>s <ESC>:call SaveFile()<CR>
+vmap <leader>s <ESC>:call SaveFile()<CR>
