@@ -80,6 +80,7 @@ set clipboard+=unnamed
 " colorscheme molokai
 " colorscheme solarized
 colorscheme Tomorrow-Night-Eighties
+" colorscheme dracula
 
 let g:molokai_original = 1
 let g:rehash256 = 1
