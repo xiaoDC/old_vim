@@ -1,7 +1,7 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-" nmap <C-q> :NERDTreeToggle<CR>
+nmap <leader>q :NERDTreeToggle<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd vimenter * NERDTree
