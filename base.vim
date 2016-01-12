@@ -28,7 +28,7 @@ set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+set foldcolumn=0
 
 set lbr
 set textwidth=80
@@ -60,7 +60,10 @@ set gdefault
 set nu
 
 " 显示光标的坐标
-" set ruler
+set ruler
+
+" 显示光标所在列
+set cursorcolumn
 
 " 高亮光标所在行
 set cursorline
