@@ -121,16 +121,18 @@ let g:NERDSpaceDelims=1
 " 多光标插件的设置
 nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
+" yankring 快捷键配置
+nnoremap <leader>z :YRShow<CR>
 " 快捷键的一些设置
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>
 " nnoremap <C-L> <C-W><C-L>
 " nnoremap <C-H> <C-W><C-H>
 
-" \s 一键保存
+" \w 一键保存
 func! SaveFile()
   exec "w"
 endfunc
-map  <leader>s :call SaveFile()<CR>
+map  <leader>w :call SaveFile()<CR>
 " imap <leader>s <ESC>:call SaveFile()<CR>
-vmap <leader>s <ESC>:call SaveFile()<CR>
+vmap <leader>w <ESC>:call SaveFile()<CR>

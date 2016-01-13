@@ -2,16 +2,22 @@
 set guifont=Menlo:h13
 
 " history存储容量
-set history=2000
+set history=1000
+
+" Allow buffer switching without saving
+set hidden
 
 " insert 模式下 backspace 可以删除
-set backspace=2
+set backspace=indent,eol,start
 
 " au InsertLeave * hi Cursor guibg=red
 " au InsertEnter * hi Cursor guibg=green
 
 " 设置 vim 加载到文件底部时，多显示 5 行
 " set scrolloff=5
+
+" Allow for cursor beyond last character
+" set virtualedit=onemore
 
 " 文件修改之后自动载入
 set autoread
@@ -64,6 +70,12 @@ set ruler
 
 " 显示光标所在列
 set cursorcolumn
+
+" 禁止显示滚动条
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
 
 " 高亮光标所在行
 set cursorline
