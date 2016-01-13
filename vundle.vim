@@ -53,6 +53,8 @@ Bundle 'https://github.com/digitaltoad/vim-jade.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 " 去掉多余空格的插件
 Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
+" 管理 vim 寄存器的插件
+Bundle 'https://github.com/vim-scripts/YankRing.vim.git'
 
 
 call vundle#end()            " required
