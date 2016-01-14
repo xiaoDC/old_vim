@@ -109,7 +109,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:tabular_loaded = 1
 
 " 代码缩进线 indentLine 的配置
-let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_color_gui = '#4A5456'
 let g:indentLine_enabled = 1
 " let g:indentLine_char = '︙'
 let g:indentLine_char = '┆'
@@ -123,6 +123,7 @@ nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
 " yankring 快捷键配置
 nnoremap <leader>z :YRShow<CR>
+let g:yankring_history_dir = '~/yankring_history'
 " 快捷键的一些设置
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>

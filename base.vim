@@ -10,6 +10,9 @@ set hidden
 " insert 模式下 backspace 可以删除
 set backspace=indent,eol,start
 
+" Height of the command bar
+set cmdheight=1
+
 " au InsertLeave * hi Cursor guibg=red
 " au InsertEnter * hi Cursor guibg=green
 
@@ -39,6 +42,7 @@ set foldcolumn=0
 set lbr
 set textwidth=80
 
+set linespace=5
 
 " 语言设置
 set langmenu=zh_CN.UTF-8
