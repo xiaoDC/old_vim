@@ -55,3 +55,8 @@ endfunction
 au FileType coffee call CoffeeScriptFold()
 
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+
+" 将 vim 支持的 markdown 类型文件的类型转为 .md
+au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.markdown set filetype=markdown

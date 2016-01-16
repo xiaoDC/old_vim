@@ -22,6 +22,8 @@ set cmdheight=1
 " Allow for cursor beyond last character
 " set virtualedit=onemore
 
+" 禁用鼠标
+set mouse-=a
 " 文件修改之后自动载入
 set autoread
 
@@ -98,14 +100,13 @@ set expandtab
 " 与系统共享剪贴板(亲测MacOS)
 set clipboard+=unnamed
 
+
 " 设置配色方案
 " colorscheme molokai
-" colorscheme solarized
 colorscheme Tomorrow-Night-Eighties
-" colorscheme dracula
 
-let g:molokai_original = 1
-let g:rehash256 = 1
+" let g:molokai_original = 1
+" let g:rehash256 = 1
 
 
 " 禁用自动缩进

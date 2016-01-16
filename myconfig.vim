@@ -1,13 +1,17 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-nmap <leader>q :NERDTreeToggle<CR>
+nmap <leader><Tab> :NERDTreeToggle<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd vimenter * NERDTree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " nnoremap ; :
 " nnoremap : ;
+
+map <C-i> <ESC>
+vmap <C-i> <ESC>
+imap <C-i> <ESC>
 
 " 修复indentline 在 nerdtree 中不显示
 autocmd FileType help,nerdtree IndentLinesToggle
@@ -44,16 +48,15 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 " tabline中buffer显示编号
 let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 " bufferline 插件配置
-
 let g:airline#extensions#bufferline#enabled = 1
-
-
 
 " gitgutter 插件的配置
 let g:gitgutter_sign_column_always = 1
 
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+nmap <F7> <Plug>GitGutterNextHunk
+nmap <F8> <Plug>GitGutterPrevHunk
 " 保证 gitgutter 实时更新，这个得根据你系统的系能，但是要求 vim 7.3.105
 " 及以上版本
 let g:gitgutter_realtime = 0
@@ -113,7 +116,8 @@ let g:indentLine_color_gui = '#4A5456'
 let g:indentLine_enabled = 1
 " let g:indentLine_char = '︙'
 let g:indentLine_char = '┆'
-let g:indentLine_fileTypeExluce=['help', 'nerdtree']
+" let g:indentLine_fileTypeExluce=['help', 'nerdtree']
+let g:indentLine_fileTypeExluce=['nerdtree']
 
 "缩进插件 缩进符号后加一个空格
 let g:NERDSpaceDelims=1
@@ -137,3 +141,6 @@ endfunc
 map  <leader>w :call SaveFile()<CR>
 " imap <leader>s <ESC>:call SaveFile()<CR>
 vmap <leader>w <ESC>:call SaveFile()<CR>
+
+" NERD_commenter 设置注释
+map <F5> <leader>ci
