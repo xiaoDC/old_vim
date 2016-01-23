@@ -1,17 +1,32 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-nmap <leader><Tab> :NERDTreeToggle<CR>
+nmap <leader><q> :NERDTreeClose<CR>
+nmap <leader><Tab> :NERDTreeFocus<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " nnoremap ; :
 " nnoremap : ;
 
-map <C-i> <ESC>
-vmap <C-i> <ESC>
-imap <C-i> <ESC>
+" noremap <C-h> ^
+" noremap <C-l> $
+
+map <leader><leader> <ESC>
+vmap <leader><leader> <ESC>
+imap <leader><leader> <ESC>
+
+noremap <C-3> <ESC>
+noremap <C-2> <ESC>
+map <D-3> <ESC>
+vmap <D-3> <ESC>
+imap <D-3> <ESC>
+
+let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
 
 " 修复indentline 在 nerdtree 中不显示
 autocmd FileType help,nerdtree IndentLinesToggle
@@ -27,26 +42,24 @@ let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '   ⎇ '
+let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.crypt = '🔒'
-
-
 
 " 设置 airline 的 statusline 一直显示
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_sep = ' <> '
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
-let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 " tabline中buffer显示编号
-let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
+" let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
 " bufferline 插件配置
 let g:airline#extensions#bufferline#enabled = 1
 
@@ -81,23 +94,19 @@ let g:NERDTreeIndicatorMapCustom = {
 
 
 " 映射切换buffer的键位
-" nnoremap [b :bp<CR>
-" nnoremap ]b :bn<CR>
-nnoremap <leader>[ :bp<CR>
-nnoremap <leader>] :bn<CR>
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
 " 设置 airline， 即顶部tab的快捷键，可以快速查看buffer
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
+" nmap <leader>1 <Plug>AirlineSelectTab1
+" nmap <leader>2 <Plug>AirlineSelectTab2
+" nmap <leader>3 <Plug>AirlineSelectTab3
+" nmap <leader>4 <Plug>AirlineSelectTab4
+" nmap <leader>5 <Plug>AirlineSelectTab5
+" nmap <leader>6 <Plug>AirlineSelectTab6
+" nmap <leader>7 <Plug>AirlineSelectTab7
+" nmap <leader>8 <Plug>AirlineSelectTab8
+" nmap <leader>9 <Plug>AirlineSelectTab9
 
 " nnoremap <TAB> :tabnext<CR>
 

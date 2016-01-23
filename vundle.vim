@@ -24,7 +24,8 @@ Bundle 'https://github.com/airblade/vim-gitgutter.git'
 " CoffeScript 插件
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 " 代码补全插件
-Bundle 'https://github.com/Valloric/YouCompleteMe.git'
+Bundle 'https://github.com/Shougo/neocomplete.vim.git'
+" Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 " Bundle 'https://github.com/marijnh/tern_for_vim.git'
 " 代码对齐
 Bundle 'https://github.com/godlygeek/tabular.git'

@@ -2,7 +2,7 @@
 set guifont=Menlo:h13
 
 " history存储容量
-set history=1000
+set history=500
 
 " Allow buffer switching without saving
 set hidden
@@ -31,7 +31,8 @@ set autoread
 set noswapfile
 
 " 关闭 search highlight
-set nohlsearch
+" set nohlsearch
+set hlsearch
 
 
 " 编码设置
@@ -104,9 +105,11 @@ set clipboard+=unnamed
 " 设置配色方案
 " colorscheme molokai
 colorscheme Tomorrow-Night-Eighties
+" colorscheme monokai
 
-" let g:molokai_original = 1
-" let g:rehash256 = 1
+
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 
 " 禁用自动缩进
@@ -143,9 +146,9 @@ noremap L $
 set foldenable " 开始折叠
 set foldmethod=syntax " 设置语法折叠
 set foldcolumn=0 " 设置折叠区域的宽度
-setlocal foldlevel=1 " 设置折叠层数为
+" setlocal foldlevel=1 " 设置折叠层数为
 " 默认代码不折叠
-" set foldlevelstart=99
+set foldlevelstart=99
 " set foldclose=all " 设置为自动关闭折叠
 " 用空格键来开关折叠
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
