@@ -56,6 +56,8 @@ Bundle 'https://github.com/digitaltoad/vim-jade.git'
 Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 " 管理 vim 寄存器的插件
 Bundle 'https://github.com/vim-scripts/YankRing.vim.git'
+" the_silver_searcher 全局搜索文件内容
+Bundle 'https://github.com/rking/ag.vim.git'
 
 
 call vundle#end()            " required
