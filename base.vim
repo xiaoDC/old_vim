@@ -23,7 +23,8 @@ set cmdheight=1
 " set virtualedit=onemore
 
 " 禁用鼠标
-set mouse-=a
+" set mouse-=a
+set mouse=n
 " 文件修改之后自动载入
 set autoread
 
@@ -43,7 +44,7 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set foldcolumn=0
 
 set lbr
-set textwidth=80
+" set textwidth=80
 
 set linespace=5
 
@@ -102,15 +103,12 @@ set expandtab
 set clipboard+=unnamed
 
 
+" let g:molokai_original = 1
+let g:rehash256 = 1
 " 设置配色方案
 " colorscheme molokai
 colorscheme Tomorrow-Night-Eighties
 " colorscheme monokai
-
-
-let g:molokai_original = 1
-let g:rehash256 = 1
-
 
 " 禁用自动缩进
 set noautoindent
@@ -172,4 +170,46 @@ function! <SID>BufcloseCloseIt()
   if buflisted(l:currentBufNum)
     execute("bdelete! ".l:currentBufNum)
   endif
+endfunction
+
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+
+
+" 关闭所有不在窗口里的 buffer
+" http://stackoverflow.com/questions/1534835/how-do-i-close-all-buffers-that-arent-shown-in-a-window-in-vim
+command! CloseOtherBuffer call <SID>Wipeout()
+function! <SID>Wipeout()
+  " list of *all* buffer numbers
+  let l:buffers = range(1, bufnr('$'))
+
+  " what tab page are we in?
+  let l:currentTab = tabpagenr()
+  try
+    " go through all tab pages
+    let l:tab = 0
+    while l:tab < tabpagenr('$')
+      let l:tab += 1
+
+      " go through all windows
+      let l:win = 0
+      while l:win < winnr('$')
+        let l:win += 1
+        " whatever buffer is in this window in this tab, remove it from
+        " l:buffers list
+        let l:thisbuf = winbufnr(l:win)
+        call remove(l:buffers, index(l:buffers, l:thisbuf))
+      endwhile
+    endwhile
+
+    " if there are any buffers left, delete them
+    if len(l:buffers)
+      execute 'bwipeout' join(l:buffers)
+    endif
+  finally
+    " go back to our original tab page
+    execute 'tabnext' l:currentTab
+  endtry
 endfunction

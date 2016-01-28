@@ -1,4 +1,3 @@
-
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
@@ -27,8 +26,8 @@ au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 au FileType javascript setl nocindent
 
-" au FileType javascript imap <c-t> $log();<esc>hi
-" au FileType javascript imap <c-a> alert();<esc>hi
+au FileType javascript imap <c-t> $log();<esc>hi
+au FileType javascript imap <c-a> alert();<esc>hi
 
 au FileType javascript inoremap <buffer> $r return
 au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
@@ -51,13 +50,9 @@ endfunction
 """""""""""""""""""""""""""""""
 function! CoffeeScriptFold()
     setl foldmethod=indent
+    " setl foldlevelstart=1
     setl foldlevelstart=99
 endfunction
 au FileType coffee call CoffeeScriptFold()
 
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
-
-
-" 将 vim 支持的 markdown 类型文件的类型转为 .md
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.markdown set filetype=markdown

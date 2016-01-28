@@ -1,8 +1,7 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-nmap <leader><q> :NERDTreeClose<CR>
-nmap <leader><Tab> :NERDTreeFocus<CR>
+nmap <leader><Tab> :NERDTreeToggle<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd vimenter * NERDTree
@@ -17,41 +16,55 @@ map <leader><leader> <ESC>
 vmap <leader><leader> <ESC>
 imap <leader><leader> <ESC>
 
-noremap <C-3> <ESC>
-noremap <C-2> <ESC>
 map <D-3> <ESC>
 vmap <D-3> <ESC>
 imap <D-3> <ESC>
+map <D-2> <ESC>
+vmap <D-2> <ESC>
+imap <D-2> <ESC>
 
 let g:neocomplete#enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+" let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeWinSize=48
 
 
 " 修复indentline 在 nerdtree 中不显示
 autocmd FileType help,nerdtree IndentLinesToggle
 
 " airline 的一些配置(必须安装 airline 插件)
+set ttimeoutlen=20
 let g:airline_theme='tomorrow'
+" let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
+
+
 let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
-let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.crypt = '🔒'
 
 " 设置 airline 的 statusline 一直显示
 set laststatus=2
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-" let g:airline#extensions#tabline#left_sep = ' <> '
+let g:airline#extensions#tabline#left_sep = '▶'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#branch#enabled = 1
@@ -98,7 +111,7 @@ noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
 " 设置 airline， 即顶部tab的快捷键，可以快速查看buffer
-" nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>1 <Plug>AirlineSelectTab1
 " nmap <leader>2 <Plug>AirlineSelectTab2
 " nmap <leader>3 <Plug>AirlineSelectTab3
 " nmap <leader>4 <Plug>AirlineSelectTab4
@@ -132,7 +145,7 @@ let g:indentLine_fileTypeExluce=['nerdtree']
 let g:NERDSpaceDelims=1
 
 " 多光标插件的设置
-nnoremap <C-c> :call multiple_cursors#quit()<CR>
+" nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
 " yankring 快捷键配置
 nnoremap <leader>z :YRShow<CR>

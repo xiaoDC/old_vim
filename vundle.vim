@@ -24,8 +24,8 @@ Bundle 'https://github.com/airblade/vim-gitgutter.git'
 " CoffeScript 插件
 Bundle 'https://github.com/kchmck/vim-coffee-script.git'
 " 代码补全插件
-Bundle 'https://github.com/Shougo/neocomplete.vim.git'
-" Bundle 'https://github.com/Valloric/YouCompleteMe.git'
+" Bundle 'https://github.com/Shougo/neocomplete.vim.git'
+Bundle 'https://github.com/Valloric/YouCompleteMe.git'
 " Bundle 'https://github.com/marijnh/tern_for_vim.git'
 " 代码对齐
 Bundle 'https://github.com/godlygeek/tabular.git'
@@ -38,7 +38,7 @@ Bundle 'https://github.com/SirVer/ultisnips.git'
 " Bundle 'jnurmine/Zenburn'
 " Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
 " 多光标操作的插件
-Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
+" Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 " Bundle 'git@github.com:humiaozuzu/TabBar.git'
 " 该插件是为了 airline 中正确显示 git branch
 Bundle 'https://github.com/tpope/vim-fugitive.git'
@@ -51,7 +51,7 @@ Bundle 'https://github.com/Raimondi/delimitMate.git'
 "jade 插件
 Bundle 'https://github.com/digitaltoad/vim-jade.git'
 " TODO list 插件
-Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
+" Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 " 去掉多余空格的插件
 Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 " 管理 vim 寄存器的插件
