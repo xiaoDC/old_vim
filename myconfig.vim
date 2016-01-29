@@ -23,6 +23,9 @@ map <D-2> <ESC>
 vmap <D-2> <ESC>
 imap <D-2> <ESC>
 
+" imap <Ctrl><space> <ESC>
+" vmap <Ctrl><space> <ESC>
+
 let g:neocomplete#enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
@@ -166,3 +169,14 @@ vmap <leader>w <ESC>:call SaveFile()<CR>
 
 " NERD_commenter 设置注释
 map <F5> <leader>ci
+
+
+
+" fixwhite_space 快捷键
+map <leader><space> :FixWhitespace<cr>
+
+
+" ctrlp 快捷键
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'

@@ -103,12 +103,23 @@ set expandtab
 set clipboard+=unnamed
 
 
-" let g:molokai_original = 1
-let g:rehash256 = 1
+" let g:rehash256 = 1
+set background=dark
+" set t_Co=256
 " 设置配色方案
+" let g:molokai_original = 1
 " colorscheme molokai
+
 colorscheme Tomorrow-Night-Eighties
 " colorscheme monokai
+
+" let g:solarized_termtrans=1
+" let g:solarized_contrast="normal"
+" let g:solarized_visibility="normal"
+" syntax enable
+" set background=dark
+" colorscheme solarized
+
 
 " 禁用自动缩进
 set noautoindent
@@ -128,6 +139,7 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+
 
 " 允许折行
 set wrap
@@ -213,3 +225,55 @@ function! <SID>Wipeout()
     execute 'tabnext' l:currentTab
   endtry
 endfunction
+
+" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=7
+
+" 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
+set relativenumber number
+au FocusLost * :set norelativenumber number
+au FocusGained * :set relativenumber
+" 插入模式下用绝对行号, 普通模式下用相对
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber
+
+command! NumToggle call <SID>NumberToggle()
+function! <SID>NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber number
+  else
+    set relativenumber
+  endif
+endfunc
+
+
+" 去掉搜索高亮
+noremap <silent><leader>/ :nohls<CR>
+
+
+map Y y$
+
+
+
+" remap U to <C-r> for easier redo
+nnoremap U <C-r>
+
+
+" 定义函数AutoSetFileHead，自动插入文件头
+autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
+function! AutoSetFileHead()
+    "如果文件类型为.sh文件
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/bash")
+    endif
+
+    "如果文件类型为python
+    if &filetype == 'python'
+        call setline(1, "\#!/usr/bin/env python")
+        call append(1, "\# encoding: utf-8")
+    endif
+
+    normal G
+    normal o
+    normal o
+endfunc

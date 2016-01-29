@@ -36,7 +36,7 @@ Bundle 'https://github.com/SirVer/ultisnips.git'
 " 代码补全集合
 " Bundle 'https://github.com/honza/vim-snippets.git'
 " Bundle 'jnurmine/Zenburn'
-" Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
+Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
 " 多光标操作的插件
 " Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 " Bundle 'git@github.com:humiaozuzu/TabBar.git'
@@ -58,6 +58,12 @@ Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 Bundle 'https://github.com/vim-scripts/YankRing.vim.git'
 " the_silver_searcher 全局搜索文件内容
 Bundle 'https://github.com/rking/ag.vim.git'
+" solarized 主题
+" Bundle 'altercation/vim-colors-solarized'
+" 闭合标签
+Bundle 'https://github.com/docunext/closetag.vim.git'
+
+
 
 
 call vundle#end()            " required
