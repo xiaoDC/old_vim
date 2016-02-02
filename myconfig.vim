@@ -164,7 +164,7 @@ func! SaveFile()
   exec "w"
 endfunc
 map  <leader>w :call SaveFile()<CR>
-" imap <leader>s <ESC>:call SaveFile()<CR>
+imap <leader>s <ESC>:call SaveFile()<CR>
 vmap <leader>w <ESC>:call SaveFile()<CR>
 
 " NERD_commenter 设置注释
@@ -173,7 +173,7 @@ map <F5> <leader>ci
 
 
 " fixwhite_space 快捷键
-map <leader><space> :FixWhitespace<cr>
+" map <leader><space> :FixWhitespace<cr>
 
 
 " ctrlp 快捷键

@@ -37,6 +37,7 @@ Bundle 'https://github.com/SirVer/ultisnips.git'
 " Bundle 'https://github.com/honza/vim-snippets.git'
 " Bundle 'jnurmine/Zenburn'
 Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
+" Bundle 'https://github.com/wincent/command-t.git'
 " 多光标操作的插件
 " Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 " Bundle 'git@github.com:humiaozuzu/TabBar.git'
@@ -57,12 +58,13 @@ Bundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 " 管理 vim 寄存器的插件
 Bundle 'https://github.com/vim-scripts/YankRing.vim.git'
 " the_silver_searcher 全局搜索文件内容
-Bundle 'https://github.com/rking/ag.vim.git'
+" Bundle 'https://github.com/rking/ag.vim.git'
 " solarized 主题
 " Bundle 'altercation/vim-colors-solarized'
 " 闭合标签
 Bundle 'https://github.com/docunext/closetag.vim.git'
-
+" indexed search
+Bundle 'https://github.com/google/vim-searchindex.git'
 
 
 
