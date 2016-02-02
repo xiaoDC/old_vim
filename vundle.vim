@@ -64,7 +64,7 @@ Bundle 'https://github.com/vim-scripts/YankRing.vim.git'
 " 闭合标签
 Bundle 'https://github.com/docunext/closetag.vim.git'
 " indexed search
-Bundle 'https://github.com/google/vim-searchindex.git'
+Bundle 'https://github.com/henrik/vim-indexed-search.git'
 
 
 
