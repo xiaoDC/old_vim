@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 " 状态栏插件
 Bundle 'https://github.com/bling/vim-airline.git'
+Bundle 'https://github.com/vim-airline/vim-airline-themes.git'
 " 文件目录插件
 Bundle 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
 " 侧边栏显示 git 文件修改

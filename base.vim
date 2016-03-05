@@ -40,9 +40,6 @@ set hlsearch
 set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
-" Add a bit extra margin to the left
-set foldcolumn=0
-
 set lbr
 " set textwidth=80
 
@@ -78,6 +75,7 @@ set ruler
 
 " 显示光标所在列
 set cursorcolumn
+let &colorcolumn="80"
 
 " 禁止显示滚动条
 set guioptions-=l
@@ -133,12 +131,6 @@ set visualbell t_vb=
 " vimrc文件修改之后自动加载。 linux。
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost .vimrc source ~/.vim/*.vim
-
-" 禁止显示滚动条
-set guioptions-=l
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
 
 
 " 允许折行
@@ -230,12 +222,12 @@ endfunction
 set scrolloff=7
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
+" set relativenumber number
+" au FocusLost * :set norelativenumber number
+" au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
+" autocmd InsertEnter * :set norelativenumber number
+" autocmd InsertLeave * :set relativenumber
 
 command! NumToggle call <SID>NumberToggle()
 function! <SID>NumberToggle()

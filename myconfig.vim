@@ -112,6 +112,9 @@ let g:NERDTreeIndicatorMapCustom = {
 " 映射切换buffer的键位
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
+" noremap m :bp<CR>
+noremap M :noh<CR>
+
 
 " 设置 airline， 即顶部tab的快捷键，可以快速查看buffer
 nmap <leader>1 <Plug>AirlineSelectTab1
@@ -153,11 +156,13 @@ let g:NERDSpaceDelims=1
 " yankring 快捷键配置
 nnoremap <leader>z :YRShow<CR>
 let g:yankring_history_dir = '~/yankring_history'
+
+
 " 快捷键的一些设置
-" nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
-" nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-h> <C-W>h
 
 " \w 一键保存
 func! SaveFile()
