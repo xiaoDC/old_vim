@@ -112,7 +112,7 @@ let g:NERDTreeIndicatorMapCustom = {
 " 映射切换buffer的键位
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
-" noremap m :bp<CR>
+noremap B :ls<CR>
 noremap M :noh<CR>
 
 
@@ -174,6 +174,7 @@ vmap <leader>w <ESC>:call SaveFile()<CR>
 
 " NERD_commenter 设置注释
 map <F5> <leader>ci
+map :ci<CR> <leader>ci
 
 
 
