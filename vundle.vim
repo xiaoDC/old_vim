@@ -37,8 +37,9 @@ Bundle 'https://github.com/SirVer/ultisnips.git'
 " 代码补全集合
 " Bundle 'https://github.com/honza/vim-snippets.git'
 " Bundle 'jnurmine/Zenburn'
-Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
-" Bundle 'https://github.com/wincent/command-t.git'
+" Bundle 'git@github.com:ctrlpvim/ctrlp.vim.git'
+Bundle 'https://github.com/Yggdroot/LeaderF.git'
+Bundle 'https://github.com/wincent/command-t.git'
 " 多光标操作的插件
 " Bundle 'https://github.com/terryma/vim-multiple-cursors.git'
 " Bundle 'git@github.com:humiaozuzu/TabBar.git'

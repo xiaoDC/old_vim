@@ -1,7 +1,8 @@
 " NERDTree 的配置
 " autocmd vimenter * NERDTree
 " let mapleader='<Ctrl>'
-nmap <leader><Tab> :NERDTreeToggle<CR>
+" nmap <leader><Tab> :NERDTreeToggle<CR>
+nmap <leader><Tab> :NERDTreeFocus<CR>
 " map <C-q> :NERDTreeFocus<CR>
 " 当所有文件都关闭的时候自动关闭 NERDTree
 " autocmd vimenter * NERDTree
@@ -27,14 +28,15 @@ imap <D-2> <ESC>
 " vmap <Ctrl><space> <ESC>
 
 let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-" let g:NERDTreeShowLineNumbers=1
-let g:NERDTreeWinSize=48
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeWinSize=40
 
 
 " 修复indentline 在 nerdtree 中不显示
-autocmd FileType help,nerdtree IndentLinesToggle
+" autocmd FileType help,nerdtree IndentLinesToggle
+autocmd FileType nerdtree IndentLinesToggle
 
 " airline 的一些配置(必须安装 airline 插件)
 set ttimeoutlen=20
@@ -64,7 +66,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.crypt = '🔒'
 
 " 设置 airline 的 statusline 一直显示
-set laststatus=2
+set laststatus=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#left_sep = '▶'
@@ -86,6 +88,7 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 nmap <F7> <Plug>GitGutterNextHunk
 nmap <F8> <Plug>GitGutterPrevHunk
+
 " 保证 gitgutter 实时更新，这个得根据你系统的系能，但是要求 vim 7.3.105
 " 及以上版本
 let g:gitgutter_realtime = 0
@@ -183,6 +186,6 @@ map :ci<CR> <leader>ci
 
 
 " ctrlp 快捷键
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'

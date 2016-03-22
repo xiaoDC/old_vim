@@ -17,7 +17,7 @@ set cmdheight=1
 " au InsertEnter * hi Cursor guibg=green
 
 " 设置 vim 加载到文件底部时，多显示 5 行
-" set scrolloff=5
+set scrolloff=5
 
 " Allow for cursor beyond last character
 " set virtualedit=onemore
@@ -41,7 +41,8 @@ set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
 set lbr
-" set textwidth=80
+set textwidth=80
+let &colorcolumn="80"
 
 set linespace=5
 
@@ -75,7 +76,6 @@ set ruler
 
 " 显示光标所在列
 set cursorcolumn
-let &colorcolumn="80"
 
 " 禁止显示滚动条
 set guioptions-=l
@@ -222,12 +222,12 @@ endfunction
 set scrolloff=7
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
-" set relativenumber number
-" au FocusLost * :set norelativenumber number
-" au FocusGained * :set relativenumber
+set relativenumber number
+au FocusLost * :set norelativenumber number
+au FocusGained * :set relativenumber
 " 插入模式下用绝对行号, 普通模式下用相对
-" autocmd InsertEnter * :set norelativenumber number
-" autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber
 
 command! NumToggle call <SID>NumberToggle()
 function! <SID>NumberToggle()
