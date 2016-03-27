@@ -1,8 +1,37 @@
+silent function! OSX()
+  return has('macunix')
+endfunction
+silent function! LINUX()
+  return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+silent function! WINDOWS()
+  return  (has('win32') || has('win64'))
+endfunction
+
+
+if &term[:4] == "xterm" || &term[:5] == 'screen' || &term[:3] == 'rxvt'
+  inoremap <silent> <C-[>OC <RIGHT>
+endif
+
+
+set nocompatible        " Must be first line
+set background=dark
+
+" 与系统共享剪贴板(亲测MacOS)
+if has('clipboard')
+  if has('unnamedplus')  " When possible use + register for copy-paste
+    set clipboard=unnamed,unnamedplus
+  else         " On mac and Windows, use * register for copy-paste
+    set clipboard=unnamed
+  endif
+endif
+
+
 " 字体 && 字号
 set guifont=Menlo:h13
 
 " history存储容量
-set history=500
+set history=1000
 
 " Allow buffer switching without saving
 set hidden
@@ -90,19 +119,18 @@ set cursorline
 set shiftwidth=2
 
 " 文件中显示 tab whitespace
-set listchars=tab:>…,trail:-
+" set listchars=tab:>…,trail:-
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 " 将Tab键更改为两个空格
 set tabstop=2
 
 set expandtab
 
-" 与系统共享剪贴板(亲测MacOS)
-set clipboard+=unnamed
+set splitbelow                  " Puts new split windows to the bottom of the current
 
 
 " let g:rehash256 = 1
-set background=dark
 " set t_Co=256
 " 设置配色方案
 " let g:molokai_original = 1
@@ -115,7 +143,6 @@ colorscheme Tomorrow-Night-Eighties
 " let g:solarized_contrast="normal"
 " let g:solarized_visibility="normal"
 " syntax enable
-" set background=dark
 " colorscheme solarized
 
 

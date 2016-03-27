@@ -48,7 +48,7 @@ Bundle 'https://github.com/tpope/vim-fugitive.git'
 " 添加注释的插件
 Bundle 'https://github.com/scrooloose/nerdcommenter.git'
 " 给word添加引号等
-"Bundle 'https://github.com/tpope/vim-surround.git'
+" Bundle 'https://github.com/tpope/vim-surround.git'
 " 自动补全引号等
 Bundle 'https://github.com/Raimondi/delimitMate.git'
 "jade 插件
